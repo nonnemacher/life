@@ -1,0 +1,70 @@
+doctype html
+html(ng-app="app")
+    
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(autor=autor)
+        
+        link(href="bootstrap/dist/css/bootstrap.min.css", rel="stylesheet")
+        link(href="app.css", rel="stylesheet")
+        
+        title=title
+        
+        
+    body(ng-init="sidenav=true",  ng-class="{active:sidenav}")
+
+
+        div.sidenav
+            
+            div.closebtn(ng-click="sidenav=!sidenav")
+                    a
+            h2.
+                About
+            ul.nav-pills.nav-stacked 
+                li.
+                   Menu 1 
+                li.
+                    Menu 2
+                
+        div.sideright
+            div.row
+                div.col-md-12
+                    div.icon
+                            &#9918
+                    div.center.
+                        COMPOSIÇÃO CORPORAL
+            div.row
+                div.col-md-12
+                    div.icon
+                            &#9918
+                    div.center.
+                        COMPOSIÇÃO CORPORAL
+                
+        
+        nav.navbar.navbar-inverse
+            div.container-fluid
+                div.navbar-header
+                a.navbar-brand(ng-click="sidenav=true")
+                    img(src="http://prosersaude.com.br/wp-content/uploads/2015/12/logo-topo.png")
+
+
+                ul.nav.navbar-nav.navbar-right
+                    
+                    li.dropdown
+                        a.dropdown-toggle(data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false") Carlos Henriquen Nonnemacher <span class="caret"/>
+                        ul.dropdown-menu
+                            li
+                                a Sair
+                            
+                
+
+
+        div.container-fluid
+            block content
+            
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")    
+        script(src="bootstrap/dist/js/bootstrap.min.js")
+        script(src="chart.js/dist//Chart.js")
+        script(src="angular/angular.min.js")
+        script(src="app.js")
